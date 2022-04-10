@@ -1,0 +1,90 @@
+header {
+  height: 120px;
+  width: 100%;
+  padding: 2% 5% 0% 5%;
+  display: flex;
+  flex-wrap: wrap; }
+  header .contenedorLogo {
+    margin-left: 0.5%;
+    width: 89.5%;
+    height: 50%;
+    display: flex; }
+    header .contenedorLogo p {
+      padding: 2px;
+      font-size: 35px;
+      height: 100%;
+      margin: 0%;
+      font-family: 'Work Sans', sans-serif; }
+  header .contenedorItems {
+    height: 50%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; }
+    header .contenedorItems img {
+      width: 35px; }
+  header nav {
+    background-color: #F4F6F6;
+    width: 100%;
+    height: 50%; }
+    header nav ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      margin: 0%;
+      padding: 0%;
+      list-style: none; }
+      header nav ul li {
+        justify-self: center;
+        align-self: center; }
+        header nav ul li a {
+          text-decoration: none;
+          font-size: 20px;
+          padding: 12px;
+          font-family: 'Josefin Sans', sans-serif;
+          color: #121212BF; }
+      header nav ul .lista:hover {
+        transform: scale(1.03);
+        transition: 0.5s; }
+        header nav ul .lista:hover .link:hover {
+          color: black; }
+
+#mainIndex {
+  margin-top: 50px; }
+  #mainIndex div {
+    width: 20%;
+    height: auto; }
+    #mainIndex div .card-image {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 80%; }
+      #mainIndex div .card-image img {
+        justify-self: center; }
+    #mainIndex div .card-content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: auto; }
+      #mainIndex div .card-content .botonProductos {
+        width: 70%;
+        position: relative;
+        margin-top: 3%; }
+    #mainIndex div .cardAbajo {
+      width: 100%; }
+      #mainIndex div .cardAbajo p {
+        margin: 2% 0 2% 3%; }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #mainIndex {
+    flex-direction: column;
+    align-items: center; }
+    #mainIndex div {
+      height: auto;
+      margin: 10px 0 10px 0;
+      width: 30%;
+      padding: 5px; } }
+
+body {
+  background-color: #F4F6F6; }
