@@ -48,6 +48,14 @@
     opacity: 0;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.3);
+    .modalCarrito{
+        #botonCerrar{
+            width: 35px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
   }
 
  .modal-active {
@@ -56,4 +64,17 @@
     border-radius: 30px;
     box-shadow: black 5px;
     background-color: whitesmoke;
+    .modalCarrito{
+        #botonCerrar{
+            width: 35px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .tituloCarrito{
+            position: absolute;
+            top: 20px;
+            left: 43%;
+        }
+    }
   }

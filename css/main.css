@@ -93,6 +93,11 @@ header {
   opacity: 0;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.3); }
+  .modal-contenedor .modalCarrito #botonCerrar {
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
 
 .modal-active {
   opacity: 1;
@@ -100,6 +105,15 @@ header {
   border-radius: 30px;
   box-shadow: black 5px;
   background-color: whitesmoke; }
+  .modal-active .modalCarrito #botonCerrar {
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+  .modal-active .modalCarrito .tituloCarrito {
+    position: absolute;
+    top: 20px;
+    left: 43%; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #mainIndex {
