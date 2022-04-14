@@ -23,6 +23,9 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        #carritoDeCompras{
+            border-bottom-style: none;
+        }
         img{
             width: 35px;
         }

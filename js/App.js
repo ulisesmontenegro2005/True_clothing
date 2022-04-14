@@ -10,7 +10,7 @@ const mostrarProductos = (productos) => {
                             <a id=boton${producto.id}></a>
                         </div>
                         <div class="card-content">
-                            <button class="botonProductos">Agregar al carrito</button>
+                            <button class="botonProductos" id=botonAgregarCarrito${producto.id}>Agregar al carrito</button>
                         </div>
                         <div class="cardAbajo">
                             <p> ${producto.desc} </p>
@@ -18,7 +18,13 @@ const mostrarProductos = (productos) => {
                         </div>
 
                          `
-                         contenedorProductos.appendChild(div);
+ contenedorProductos.appendChild(div);
+ 
+ const boton = document.getElementById(`botonAgregarCarrito${producto.id}`);
+ boton.addEventListener('click', () => {
+     carritoIndex(producto.id);
+       });
+
     });
 };
 

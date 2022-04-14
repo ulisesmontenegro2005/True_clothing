@@ -21,6 +21,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly; }
+    header .contenedorItems #carritoDeCompras {
+      border-bottom-style: none; }
     header .contenedorItems img {
       width: 35px; }
   header nav {
@@ -75,6 +77,29 @@ header {
       width: 100%; }
       #mainIndex div .cardAbajo p {
         margin: 2% 0 2% 3%; }
+
+.modal-contenedor {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  bottom: 25%;
+  right: 25%;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  border-radius: 30px;
+  box-shadow: black 5px;
+  background-color: whitesmoke; }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #mainIndex {

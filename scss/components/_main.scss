@@ -32,3 +32,28 @@
         }
     }
 }
+
+.modal-contenedor {
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    bottom: 25%;
+    right: 25%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+ .modal-active {
+    opacity: 1;
+    visibility: visible;
+    border-radius: 30px;
+    box-shadow: black 5px;
+    background-color: whitesmoke;
+  }

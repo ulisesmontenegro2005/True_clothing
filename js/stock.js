@@ -23,4 +23,4 @@ productos = [
         cantidad: 5,
         img: '../img/remera.jpeg'
     }
-]
+];
