@@ -21,10 +21,10 @@ const mostrarProductos = (productos) => {
  contenedorProductos.appendChild(div);
  
  const boton = document.getElementById(`botonAgregarCarrito${producto.id}`);
+
  boton.addEventListener('click', () => {
      carritoIndex(producto.id);
        });
-
     });
 };
 
