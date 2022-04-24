@@ -18,13 +18,13 @@ const mostrarProductos = (productos) => {
                         </div>
 
                          `
- contenedorProductos.appendChild(div);
- 
- const boton = document.getElementById(`botonAgregarCarrito${producto.id}`);
+        contenedorProductos.appendChild(div);
+        
+        const carrito = document.getElementById(`botonAgregarCarrito${producto.id}`);
 
- boton.addEventListener('click', () => {
-     carritoIndex(producto.id);
-       });
+        carrito.addEventListener('click', () => {
+            carritoIndex(producto.id);
+        });
     });
 };
 

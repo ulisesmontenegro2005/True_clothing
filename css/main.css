@@ -78,6 +78,33 @@ header {
       #mainIndex div .cardAbajo p {
         margin: 2% 0 2% 3%; }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #mainIndex {
+    flex-direction: column;
+    align-items: center; }
+    #mainIndex div {
+      height: auto;
+      margin: 10px 0 10px 0;
+      width: 30%;
+      padding: 5px; } }
+
+.contenidoCarrito {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%; }
+  .contenidoCarrito .productoCarrito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border: grey solid 2px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    .contenidoCarrito .productoCarrito p {
+      height: 100%;
+      margin: 1%; }
+
 .modal-contenedor {
   position: fixed;
   top: 0;
@@ -113,16 +140,6 @@ header {
   opacity: 1;
   visibility: visible;
   z-index: 5; }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  #mainIndex {
-    flex-direction: column;
-    align-items: center; }
-    #mainIndex div {
-      height: auto;
-      margin: 10px 0 10px 0;
-      width: 30%;
-      padding: 5px; } }
 
 body {
   background-color: #F4F6F6; }
