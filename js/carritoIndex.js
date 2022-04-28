@@ -17,7 +17,6 @@ const carritoIndex = (productoId) => {
     }
 
     const contarProductosRepetidos = (prodRepetido) => {
-        console.log(prodRepetido)
         if (prodRepetido) {
           prodRepetido.cantidad++
           document.getElementById(`cantidad${prodRepetido.id}`).innerHTML = 
@@ -33,6 +32,17 @@ const carritoIndex = (productoId) => {
         let producto = productos.find(producto => producto.id == productoId);
         carritoDeCompras.push(producto);
         producto.cantidad = 1;
+
+        Toastify({
+          text: "Producto añadido correctamente.",
+          className: "info",
+          duration: 1500, 
+          gravity: "bottom",
+          position: "right",
+          style: {
+            background: "linear-gradient(to right, #00b09b, #96c93d)",
+          }
+        }).showToast();
 
         // contenedores para los productos en el carrito
         let div = document.createElement('div');

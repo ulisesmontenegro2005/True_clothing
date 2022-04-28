@@ -91,7 +91,8 @@ header {
 .contenidoCarrito {
   display: flex;
   flex-direction: column;
-  margin-top: 3%; }
+  margin-top: 3%;
+  height: 65%; }
   .contenidoCarrito .productoCarrito {
     display: flex;
     flex-direction: row;
@@ -117,6 +118,8 @@ header {
   opacity: 0;
   visibility: hidden; }
   .modal-contenedor .modalCarrito {
+    display: flex;
+    flex-flow: column nowrap;
     width: 50%;
     height: 50%;
     border-radius: 30px;
@@ -133,8 +136,16 @@ header {
     .modal-contenedor .modalCarrito .tituloCarrito {
       display: inline;
       position: relative;
-      left: 40%;
+      left: 38%;
       top: 5%; }
+  .modal-contenedor .containerPrecio {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center; }
+    .modal-contenedor .containerPrecio p {
+      margin: 0; }
 
 .modal-active {
   opacity: 1;

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 3%;
+    height: 65%;
     .productoCarrito{
         display: flex;
         flex-direction: row;
@@ -33,6 +34,8 @@
     opacity: 0;
     visibility: hidden;
     .modalCarrito{
+       display: flex;
+       flex-flow: column nowrap;
        width: 50%;
        height: 50%;
        border-radius: 30px;
@@ -50,8 +53,18 @@
         .tituloCarrito{
             display: inline;
             position: relative;
-            left: 40%;
+            left: 38%;
             top: 5%;
+        }
+    }
+    .containerPrecio{
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        p{
+            margin: 0;
         }
     }
   }
