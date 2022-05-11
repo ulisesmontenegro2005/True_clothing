@@ -1,6 +1,8 @@
-const contenedorProductos = document.getElementById("mainIndex");
+const mostrarProductos = async () => {
 
-const mostrarProductos = (productos) => {
+    const contenedorProductos = document.getElementById("mainIndex");
+    const productos = await getData();
+
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.classList.add('card');
@@ -28,4 +30,5 @@ const mostrarProductos = (productos) => {
     });
 };
 
-mostrarProductos(productos);
+export { mostrarProductos }
+

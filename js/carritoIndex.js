@@ -2,9 +2,13 @@ let carritoDeCompras = [];
 
 const carritoIndex = (productoId) => {
 
+    actualizarCarrito(carritoDeCompras);
+
     const contenedorCarrito = document.getElementById('carritoContenedor');
 
     let productoRepetido = carritoDeCompras.find(producto => producto.id == productoId);
+
+    // ELIMINAR PRODUCTOS DEL CARRITO
 
     const eliminarProductosCarrito = (productoId) =>{
         let botonEliminar = document.getElementById(`botonEliminar${productoId}`);
@@ -15,6 +19,8 @@ const carritoIndex = (productoId) => {
             actualizarCarrito(carritoDeCompras);
         });
     }
+
+    // CONTAR PRODUCTOS REPETIDOS DEL CARRITO
 
     const contarProductosRepetidos = (prodRepetido) => {
         if (prodRepetido) {
@@ -27,12 +33,15 @@ const carritoIndex = (productoId) => {
         }
       }
 
+      // RENDERIZAR PRODUCTOS DEL CARRITO
+
     const renderProductosCarrito = (productoId) => {
         // buscar id (find) y pushearlo al array con cantidad 1
         let producto = productos.find(producto => producto.id == productoId);
         carritoDeCompras.push(producto);
         producto.cantidad = 1;
 
+        // alerta añadido al carrito
         Toastify({
           text: "Producto añadido correctamente.",
           className: "info",
@@ -43,6 +52,8 @@ const carritoIndex = (productoId) => {
             background: "linear-gradient(to right, #00b09b, #96c93d)",
           }
         }).showToast();
+
+        console.log(carritoDeCompras);
 
         // contenedores para los productos en el carrito
         let div = document.createElement('div');
@@ -62,3 +73,4 @@ const carritoIndex = (productoId) => {
     contarProductosRepetidos(productoRepetido);
     eliminarProductosCarrito(productoId);
 }
+
