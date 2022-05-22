@@ -1,6 +1,6 @@
-const getData = async () => {
+export const getData = async () => {
     try {
-        const response = await fetch("/stock.json");
+        const response = await fetch("./js/stock.json");
         const data = await response.json();
 
         return data;
@@ -8,3 +8,4 @@ const getData = async () => {
         console.log('Hubo un error', error)
     }
 }
+

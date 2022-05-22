@@ -1,3 +1,6 @@
+import { carritoIndex } from "./carritoIndex.js";
+import { getData } from "./getData.js";
+
 const mostrarProductos = async () => {
 
     const contenedorProductos = document.getElementById("mainIndex");
