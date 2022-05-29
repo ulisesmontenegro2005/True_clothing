@@ -1,15 +1,11 @@
+import { productos } from "./stock.js";
 import { actualizarCarrito } from "./actualizarCarrito.js";
-
 let carritoDeCompras = [];
 
+const contenedorCarrito = document.getElementById('carritoContenedor');
+
 export const carritoIndex = (productoId) => {
-  if (localStorage.getItem("productos")) {
-    carritoDeCompras = JSON.parse(localStorage.getItem("carrito"));
-  }
-
     actualizarCarrito(carritoDeCompras);
-
-    const contenedorCarrito = document.getElementById('carritoContenedor');
 
     let productoRepetido = carritoDeCompras.find(producto => producto.id == productoId);
     contarProductosRepetidos(productoRepetido, productoId);
@@ -17,10 +13,6 @@ export const carritoIndex = (productoId) => {
 }
 
 export const eliminarProductosCarrito = (productoId) =>{
-  if (localStorage.getItem("productos")) {
-    carritoDeCompras = JSON.parse(localStorage.getItem("carrito"));
-  }
-
   let botonEliminar = document.getElementById(`botonEliminar${productoId}`);
   
   botonEliminar.addEventListener('click', () => {
@@ -33,8 +25,7 @@ export const eliminarProductosCarrito = (productoId) =>{
 const contarProductosRepetidos = (prodRepetido, productoId) => {
   if (prodRepetido) {
     prodRepetido.cantidad++
-    document.getElementById(`cantidad${prodRepetido.id}`).innerHTML = 
-    `<p id=cantidad${prodRepetido.id}>Cantidad:${prodRepetido.cantidad}</p>`;
+    document.getElementById(`cantidad${prodRepetido.id}`).innerHTML = `<p id=cantidad${prodRepetido.id}>Cantidad:${prodRepetido.cantidad}</p>`;
     actualizarCarrito(carritoDeCompras);
   } else {
     renderProductosCarrito(productoId);
